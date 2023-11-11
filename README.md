@@ -1,3 +1,5 @@
+![envrypt logo](./envrypt-logo.jpg)
+
 # Envrypt
 
 Envrypt is a Python tool/library designed to secure environment variables by encrypting them both in disk and memory. It works with `dotenv` and provides a simple interface to access encrypted environment variables in your program.
