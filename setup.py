@@ -7,7 +7,6 @@ setup(
     license='MIT',
     author_email='robinsyihab@gmail.com',
     description='Python tool/library designed to secure environment variables by encrypting them both in disk and memory.',
-    long_description=open('README.md').read(),
     readme="README.md",
     packages=find_packages(),
     classifiers=[
