@@ -1,8 +1,18 @@
-![envrypt logo](./envrypt-logo.jpg)
+![envrypt logo](https://github.com/anvie/envrypt/raw/main/envrypt-logo.jpg)
 
 # Envrypt
 
 Envrypt is a Python tool/library designed to secure environment variables by encrypting them both in disk and memory. It works with `dotenv` and provides a simple interface to access encrypted environment variables in your program.
+
+This tool safeguards your application’s environmental variables by concealing them using simple encryption. This can be crucial in environments where telemetry tools or logging mechanisms might accidentally capture and expose sensitive environmental variables, preventing unintended data leaks. There is no guarantee that your library dependency will not accidentally log your environment variables, so it is best to encrypt them.
+
+This tool can provide a layer of protection which actively deters the accidental disclosure of environmental variables, which could occur due to:
+
+* Logging tools that inadvertently output environment variables.
+* Telemetry or monitoring systems that may include environment details in their reports.
+* Error handling frameworks which collect debugging information, potentially capturing the state of the environment.
+
+By keeping these variables encrypted in memory, envrypt significantly reduces the risk of sensitive information being exposed through such vectors.
 
 Envrypt uses a simple XOR encryption mechanism. While XOR is relatively basic and not recommended for high-security requirements, it can be sufficient for obfuscating environment variables in scenarios where the threat model allows for it. Note that the XOR encryption strength highly depends on the length and randomness of the key. Due to the simplicity of the algorithm, it is important to maintain the secrecy of the encryption key for the encryption to remain effective.
 
